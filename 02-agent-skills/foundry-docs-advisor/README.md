@@ -2,7 +2,7 @@
 
 Read [SKILL.md](SKILL.md) for the workflow and [priority source index](references/priority-sources.md) for direct Microsoft links. Both work offline as dated reference materials.
 
-To list approved URLs (does **not** fetch the network):
+From `02-agent-skills/foundry-docs-advisor`, list approved URLs offline (the command does **not** fetch the network):
 
 ```bash
 python scripts/refresh_references.py --list

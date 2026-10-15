@@ -16,7 +16,7 @@ Try BMad v6.12 with clear handoffs from business problem to functional specifica
 
 ## If there is a desire for one lifecycle from discovery to production feedback
 
-Review the optional AutoNav reference with its owner. Confirm access, runtime compatibility and the actual released version before proposing a rollout. The owner-provided README describes separate lifecycle phases and human gates. That description is not an independently verified production claim.
+Review the optional AutoNav reference with its owner. Confirm access, runtime compatibility and the actual released version before proposing a rollout. Access, released version and distribution rights were not verified for this update. It is not needed to complete the learning path.
 
 ## The decision to record
 

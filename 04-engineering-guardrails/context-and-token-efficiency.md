@@ -1,6 +1,6 @@
 # Context management and token usage
 
-The team raised token usage as a practical concern. The correct unit of comparison is the **fully reviewed change**, including retries, tests and rework, not the first AI response.
+Repeated discovery, oversized context and retries can increase token usage. The correct unit of comparison is the **fully reviewed change**, including retries, tests and rework, not the first AI response.
 
 ## Avoid unnecessary context
 
@@ -32,4 +32,4 @@ A sensible comparison is two comparable tasks or an A/B crossover with the same 
 
 ## Token budgeting without unsafe shortcuts
 
-Use smaller models for classification/extraction and larger models only where quality data justify them. Cache identical deterministic results. Stop after repeated tool failures rather than blindly retrying. Reduce irrelevant source material and redundant evaluations, but preserve security checks, negative tests, audit and review. See `05-evaluation/model-selection.md` for the scoring method.
+Use smaller models for classification/extraction and larger models only where quality data justify them. Cache identical deterministic results. Stop after repeated tool failures rather than blindly retrying. Reduce irrelevant source material and redundant evaluations, but preserve security checks, negative tests, audit and review. See [model selection](../05-evaluation/model-selection.md) for the scoring method. Use the [session handoff template](session-handoff-template.md) to carry decisions into a fresh session.

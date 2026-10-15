@@ -5,7 +5,7 @@ Status: Accepted for learning package
 
 ## Context
 
-enterprise asked for development practices and Foundry references, without requesting live integration or supplying production contracts. A repeatable local exercise is useful before any cloud connection.
+This company-agnostic learning package needs a repeatable exercise for development practices before any cloud connection. It assumes no production contracts, company data or live integration.
 
 ## Decision
 

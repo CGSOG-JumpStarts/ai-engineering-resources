@@ -2,7 +2,7 @@
 
 **Research snapshot: 15 October 2026.** "Microsoft Foundry" is the current Microsoft documentation branding; many older links and code samples still say "Azure AI Foundry." Check the selected project's region, setup mode, SDK versions, identity and deployment model before applying a guide.
 
-enterprise is already building stakeholder advisory agents with Foundry. The near-term decision is what Foundry should operate, and what enterprise must build around it for authorization, business data, change control, tests, and support.
+For an advisory-agent application, decide which responsibilities Foundry will operate and which the application team owns: authorization, business data, change control, testing and support.
 
 ## Which runtime owns which responsibility?
 
@@ -21,14 +21,14 @@ Hosted Agents are generally available as a **service**. Certain Python Agent Fra
 Dealer portal / internal advisory UI
    │  signed-in user's real identity + request/trace ID
    ▼
-enterprise application API / gateway
+Application API / gateway
    │  server-side authz, tenant context, quotas, audit
    ▼
 Foundry agent (prompt agent or Hosted agent)
    │  model + allowed tool definitions
    │  read-only question → permitted tool call
    ▼
-enterprise-operated tool API or approved MCP gateway
+Team-operated tool API or approved MCP gateway
    │  Entra / OAuth / service identity as appropriate
    │  authorization checked again at the system of record
    ▼
@@ -44,7 +44,7 @@ Foundry / Application Insights telemetry, evaluation datasets,
 latency + token costs + tool errors + safety reviews.
 ```
 
-This is a **conceptual design**, not an assessment of enterprise's existing environment. No real enterprise architecture or identity system was provided. The sample app in `06-reference-exercise` runs only the read-only tool boundary offline.
+This is a conceptual design for a fictional support domain. The [reference lab](../06-reference-lab/README.md) demonstrates a read-only catalog boundary offline; it does not implement Foundry, MCP or real authentication.
 
 ## A tool declaration does not implement the business action
 
@@ -70,7 +70,7 @@ For long-running workflows, Microsoft Agent Framework documents checkpointing an
 1. Is the agent purely advisory, or will it perform actions in enterprise systems?
 2. Which data is visible to which dealer, support role, and internal team?
 3. Are tool calls synchronous, long-running, regulated, or costly?
-4. Does enterprise need managed Foundry hosting, or should the agent run within an existing application service?
+4. Does the application need managed Foundry hosting, or should the agent run within an existing application service?
 5. Which region, networking, model, and storage configurations are currently approved?
 6. What is the expected process for evaluations, rollbacks, alerts, and version ownership?
 

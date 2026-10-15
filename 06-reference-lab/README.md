@@ -1,6 +1,6 @@
 # Dealer-support advisor: local spec-driven exercise
 
-A working, **fictional** support-answer application showing how approved specs, tasks, deterministic behavior, tests and evaluation evidence fit together. This is a teaching reference, **not** a enterprise dealer policy catalog or a production AI agent.
+A working, **fictional** support-answer application showing how approved specs, tasks, deterministic behavior, tests and evaluation evidence fit together. This is a teaching reference, **not** a real dealer policy catalog or a production AI agent.
 
 ## What it does
 

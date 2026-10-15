@@ -6,7 +6,7 @@ Use a scratch repository with fictional data first. Commands below reflect vendo
 
 Official source: [github/spec-kit](https://github.com/github/spec-kit). Official CLI reference: [Specify init](https://github.com/github/spec-kit/blob/main/docs/reference/core.md).
 
-The vendor documents Python `uv` and the Specify CLI. In an approved terminal:
+The vendor documents Python 3.11+, `uv` and the Specify CLI. This prerequisite differs from the offline lab's Python 3.10+ requirement. In an approved terminal:
 
 ```bash
 uv tool install specify-cli
@@ -31,7 +31,7 @@ Official [repository](https://github.com/microsoft/hve-core) and [getting-starte
 
 ## Jump Start AutoNav (optional)
 
-The author's README identifies an optional lifecycle-based tool with greenfield/brownfield routing and review gates. As of the inspected source revision it describes `2.0.0-beta.0` and notes publication to npm may not be complete. Its GitHub source is **private**. Do not place installation commands in enterprise build scripts until the owner provides an approved accessible distribution and confirms the correct version. A shareable demo or installation guide is sufficient for an initial comparison.
+An [author-provided framework reference](https://github.com/otey247/JumpStart-AutoNav) is optional. This update did not verify its access, released version or distribution rights. Request a reviewed demo or shareable distribution from the owner before evaluating it. It is not a dependency of this package.
 
 ## Important
 

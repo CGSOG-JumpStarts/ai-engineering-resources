@@ -1,6 +1,6 @@
 # Context and token efficiency practices
 
-The enterprise team mentioned lowering token usage. Token counts, cost and accuracy can conflict; optimize **cost per accepted outcome**, not tokens alone.
+Token counts, cost and accuracy can conflict; optimize **cost per accepted outcome**, not tokens alone.
 
 ## Concrete defaults
 

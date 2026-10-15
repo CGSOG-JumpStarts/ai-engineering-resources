@@ -18,9 +18,9 @@ Write the result into `06-reference-lab/specs/implementation-plan.md` or a separ
 
 ## Step 3: Implementation under a bounded contract
 
-> Implement only the approved task T-003. Respect `AGENTS.md` and the dealer-support spec. Preserve existing API contracts and tests. Add or update a test for every affected acceptance criterion. Do not call external APIs or invent policies.
+> Implement only the approved task T-001. Respect `AGENTS.md` and the dealer-support spec. Preserve existing API contracts and tests. Add or update a test for every affected acceptance criterion. Do not call external APIs or invent policies.
 
-Run the unit tests and the contract validator. The sample lab is already implemented; your exercise can introduce a new unsupported term and add its test to practice the loop.
+Run the unit tests and the contract validator. The sample lab is already implemented. Use the [guided exercise](guided-exercise.md) to practice a bounded spec/test change; introduce new behavior only after its spec and task are reviewed.
 
 ## Step 4: Convergence / independent review
 

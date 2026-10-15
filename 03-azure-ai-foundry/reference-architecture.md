@@ -1,6 +1,6 @@
 # Dealer advisory agent: reference architecture
 
-**Illustrative only:** enterprise's actual architecture, approved knowledge, APIs, identities, region and policies were not provided. All names and stores here are generic. Implement only after the team confirms real contracts.
+**Illustrative only:** this fictional dealer-support architecture assumes no company environment. Confirm knowledge sources, API contracts, identities, region and policies for your application before implementation.
 
 ```mermaid
 flowchart TD

@@ -44,7 +44,7 @@ npx skills add https://github.com/microsoft/azure-skills --skill microsoft-found
 
 Follow the [official guide](https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/use-microsoft-foundry-skill) for supported hosts and configuration. Review external code before installing it; no third-party tool is automatically downloaded by this package.
 
-The **newly authored `foundry-research` skill in this ZIP** is intentionally narrower. It enforces evidence-based technical research, a status matrix, and a decision record for enterprise's context; it does not claim to replace Microsoft's skill or query an Azure tenant.
+The included [foundry-docs-advisor](../02-agent-skills/foundry-docs-advisor/README.md) is narrower: it checks official references and records feature status, implementation considerations and unknowns. It does not query an Azure tenant. The official skill above includes operational workflows; installing it is separate from permission to use those workflows.
 
 ## Version change procedure
 

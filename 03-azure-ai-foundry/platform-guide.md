@@ -1,6 +1,6 @@
-# Microsoft Foundry: capabilities relevant to enterprise
+# Microsoft Foundry: capabilities and runtime choices
 
-**Research checkpoint: 2026-10-15.** enterprise is already using Foundry in an advisory-agent project according to the introduction meeting. This guide focuses on architecture decisions and reviews, not a claim about its current deployment details.
+**Research checkpoint: 2026-10-15.** Use this guide to compare Foundry options for an advisory-agent application. It assumes no particular company architecture or existing deployment.
 
 ## What Foundry adds
 
@@ -35,7 +35,7 @@ Attach Application Insights to the Foundry project, configure tracing and data p
 
 Agent evaluation should combine **system outcomes** (did the request succeed? was advice grounded?) with **process outcomes** (which tool was called? were parameters authorized? did the API succeed?). Microsoft's built-in Foundry evaluators cover several such metrics, with preview labels and tool-type restrictions that must be checked case by case. [Tracing](https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/trace-agent-setup), [evaluators](https://learn.microsoft.com/en-us/azure/foundry/concepts/evaluation-evaluators/agent-evaluators).
 
-## Practical enterprise questions to confirm
+## Questions to confirm for your application
 
 1. Foundry project type and deployment region? Hosted or application-hosted agent today?
 2. Which tools does each agent call, and does tool access represent an individual stakeholder or service principal?

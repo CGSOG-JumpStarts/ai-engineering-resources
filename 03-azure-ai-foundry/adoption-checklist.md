@@ -30,4 +30,4 @@
 - [ ] Define release gate, error budget/latency objective and alert owner.
 - [ ] Retest after every model, prompt, tool, skill or retrieval change.
 
-**Do not claim this checklist is complete** for enterprise until the team confirms its architecture, business requirements, security approvals, and operational objectives.
+**Do not claim this checklist is complete** for your application until the team confirms its architecture, business requirements, security approvals, and operational objectives.

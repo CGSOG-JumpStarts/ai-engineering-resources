@@ -28,4 +28,4 @@ Use a narrow set of official documentation pages for the task. Research checkpoi
 
 ## Keeping an answer honest
 
-A docs fetch tells you what Microsoft documents, not what enterprise's tenant is configured to use. Verify permissions, allowed region, subscription, policy, model deployment and actual installed packages with authorized operations. A stale cached snapshot must not override the current live page.
+A docs fetch tells you what Microsoft documents, not what your tenant is configured to use. Verify permissions, allowed region, subscription, policy, model deployment and actual installed packages with authorized operations. A stale cached snapshot must not override the current live page.

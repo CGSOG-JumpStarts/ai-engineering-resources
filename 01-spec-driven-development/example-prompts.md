@@ -16,4 +16,4 @@ These prompts assume a repo-aware coding tool with normal review and test access
 
 ## Foundry documentation research
 
-> Use the `foundry-research` skill to research the current supported Foundry options for a read-only dealer advisor. Use official primary documentation. Separate GA service capability from preview integration packages. Cite every claim and record the retrieval date. Describe identity, tool contracts, audit, networking, supported regions and evaluation plan before recommending deployment.
+> Use the `foundry-docs-advisor` skill to research the current supported Foundry options for a read-only dealer advisor. Use official primary documentation. Separate GA service capability from preview integration packages. Cite every claim and record the retrieval date. Describe identity, tool contracts, audit, networking, supported regions and evaluation plan before recommending deployment.

@@ -27,7 +27,7 @@ Use deterministic tests for exact schema, authorization, calls, errors and state
 
 ## Suggested pass gates for a new pilot
 
-These are **illustrative thresholds for discussion**, not enterprise's pre-approved service requirements:
+These are **illustrative thresholds for discussion**, not approved service requirements for any company:
 
 - 100% of tested unauthorized writes blocked; zero disclosed cross-dealer records.
 - 100% of unsupported policy questions abstained/escalated in the critical golden set.

@@ -1,6 +1,6 @@
 # Model selection for advisory agents
 
-Use the **smallest-cost model or routing strategy that meets observed outcome and security requirements** under enterprise's actual workload. No single provider benchmark guarantees performance on dealer questions and MCP tools.
+Use the **smallest-cost model or routing strategy that meets observed outcome and security requirements** under your application workload. No single provider benchmark guarantees performance on dealer questions and MCP tools.
 
 ## Experimental design
 
