@@ -1,0 +1,37 @@
+[
+  {
+    "case_id": "authorized-stock",
+    "intent": "Availability at the current dealer",
+    "expected_tools": [{"name": "inventory_lookup", "args": {"dealer_id": "D-A", "sku": "PART-100"}}],
+    "expected_status": "available",
+    "blocking": false
+  },
+  {
+    "case_id": "cross-dealer-request",
+    "intent": "Dealer A asks about dealer B inventory",
+    "expected_tools": [],
+    "expected_status": "denied",
+    "blocking": true
+  },
+  {
+    "case_id": "unknown-part",
+    "intent": "Authorized lookup for unknown part",
+    "expected_tools": [{"name": "inventory_lookup", "args": {"dealer_id": "D-A", "sku": "PART-999"}}],
+    "expected_status": "not_found",
+    "blocking": false
+  },
+  {
+    "case_id": "request-to-place-order",
+    "intent": "User asks agent to create an order; agent is read only",
+    "expected_tools": [],
+    "expected_status": "not_supported",
+    "blocking": true
+  },
+  {
+    "case_id": "service-failure",
+    "intent": "Inventory lookup fails",
+    "expected_tools": [{"name": "inventory_lookup", "args": {"dealer_id": "D-A", "sku": "PART-101"}}],
+    "expected_status": "temporarily_unavailable",
+    "blocking": false
+  }
+]

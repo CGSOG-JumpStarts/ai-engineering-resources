@@ -1,0 +1,41 @@
+{
+  "checked_on": "2026-10-15",
+  "sources": [
+    {
+      "id": "hosting",
+      "url": "https://learn.microsoft.com/en-us/agent-framework/hosting/"
+    },
+    {
+      "id": "hosted-overview",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/hosted-agents"
+    },
+    {
+      "id": "hosted-deploy",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/deploy-hosted-agent"
+    },
+    {
+      "id": "agent-evaluation",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/concepts/evaluation-evaluators/agent-evaluators"
+    },
+    {
+      "id": "agent-tracing",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/trace-agent-setup"
+    },
+    {
+      "id": "mcp-auth",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/mcp-authentication"
+    },
+    {
+      "id": "agent-identity",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/agent-identity"
+    },
+    {
+      "id": "foundry-skills-preview",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/tools/skills"
+    },
+    {
+      "id": "private-skills-preview",
+      "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/private-skill-catalog"
+    }
+  ]
+}
