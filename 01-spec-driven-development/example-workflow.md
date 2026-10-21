@@ -1,5 +1,7 @@
 # Worked spec-to-implementation example
 
+For the longer walkthrough with executable examples, read [the code companion](../GUIDE.md). This page is the short workflow reference; [Chapter 3](../GUIDE.md#3-make-a-bounded-change) includes a worked regression-test exercise.
+
 **Scenario:** a dealer submits a portal support question about parts, warranty or store hours. The application recommends the appropriate next step based on a small approved, fictional catalog. It must not invent warranty coverage or expose dealer-specific data. This is a synthetic learning scenario, not enterprise policy.
 
 ## Step 1: Capture intent

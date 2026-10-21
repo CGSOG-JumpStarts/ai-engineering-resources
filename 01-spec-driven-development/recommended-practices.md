@@ -1,4 +1,4 @@
-# Spec-driven engineering practices for enterprise
+# Spec-driven engineering practices
 
 ## Agree on the workflow contract
 
@@ -19,6 +19,26 @@ Assign durable IDs such as `FR-001`, `NFR-001`, `AC-001`, `T-001` and `TEST-001`
 ## Bounded implementation
 
 One task should have a clear starting state, small edit surface, dependency list, proof of completion and stop condition. Developers review the plan *before* tool-enabled implementation. AI assistants may recommend architecture changes, but decisions requiring new permissions, external calls, schema migrations, cost exposure or customer-data access need explicit approval.
+
+## Size the plan to the change
+
+The following is a repository recommendation, not a company approval policy. Use the smallest agreement that exposes the unresolved decisions and gives a reviewer a reliable check.
+
+| Change | Useful agreement and evidence |
+|---|---|
+| Isolated edit with understood behavior | Bounded task, preserved behavior and focused check/review |
+| Feature with new observable behavior | Spec, acceptance criteria, implementation plan and affected negative tests |
+| Uncertain integration or permission change | Evidence for open decisions, interface/identity contracts, failure cases and an approved plan |
+
+Research a specific gap: an unknown API contract, an undocumented dependency or a behavior the tests do not explain. Reuse adequate evidence. [HVE RPI](https://raw.githubusercontent.com/microsoft/hve-core/main/docs/rpi/README.md) and [BMad planning](https://docs.bmad-method.org/plan/choose-a-planning-path/) support selective research and smaller paths; the table above is this package's suggested application of that guidance.
+
+## Keep specifications current deliberately
+
+Name the authoritative specification and its owner. Label each document as a current contract, a historical delivery record or a draft. When intent changes, preserve IDs, record the decision and reconcile the spec, plan, tasks and tests. Link superseded records rather than silently making an old delivery spec appear current.
+
+In the synthetic lab, code that answers a coverage guarantee conflicts with `AC-004`, which requires escalation. Report a defect. If an owner later approves different behavior for a separate application, revise that application's requirement and failure tests before implementing it. Do not let generated code establish its own intended behavior.
+
+Spec Kit's [spec-maintenance guidance](https://github.github.io/spec-kit/guides/evolving-specs.html) leaves this maintenance convention to the team. Consistency analysis and convergence findings are review inputs; neither grants permission to rewrite requirements to match a surprising implementation. Review framework/template upgrades separately from changes of application intent.
 
 ## CI and review
 

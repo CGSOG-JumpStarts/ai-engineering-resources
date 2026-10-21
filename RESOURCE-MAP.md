@@ -2,6 +2,8 @@
 
 This map covers the technical questions the package supports. Exercises use synthetic examples. Suggested artifacts are review aids, not company policy or evidence of completed work.
 
+For sequential reading, start with [the code companion](GUIDE.md). It follows a single application from request to evidence. Use the table below as a reference index after the walkthrough, and the [companion source index](examples/companion/README.md) to find complete runnable examples.
+
 | Question | Read | Try or produce |
 |---|---|---|
 | What does spec-driven engineering involve? | [Fundamentals](01-spec-driven-development/fundamentals.md) | Trace one acceptance criterion to its executed test |
@@ -16,4 +18,4 @@ This map covers the technical questions the package supports. Exercises use synt
 | How do we reduce repeated context and token use? | [Context guidance](04-engineering-guardrails/context-and-token-efficiency.md) | [Session handoff](04-engineering-guardrails/session-handoff-template.md) and measured cost per accepted change |
 | How do we compare models and tool behavior? | [Evaluation](05-evaluation/README.md), [model selection](05-evaluation/model-selection.md) | Fixed cases, actual traces and a [scorecard](05-evaluation/scorecard-template.md) |
 
-Use [Start here](START-HERE.md) for a short sequence. A team can review these resources independently; no workshop or commercial engagement is assumed.
+Use [Start here](START-HERE.md) for a short sequence and the [October 2026 update](reports/October%202026%20engineering%20update.md) for the reasoning behind the newer guidance. A team can review these resources independently; no workshop or commercial engagement is assumed.

@@ -2,6 +2,8 @@
 
 A working, **fictional** support-answer application showing how approved specs, tasks, deterministic behavior, tests and evaluation evidence fit together. This is a teaching reference, **not** a real dealer policy catalog or a production AI agent.
 
+For a narrated walkthrough, read [the code companion](../GUIDE.md). Its [complete examples](../examples/companion/README.md) call this implementation directly, inspect its AC/test mapping and exercise its HTTP boundary. This file remains the run/verification reference for the application itself.
+
 ## What it does
 
 - Answers common *synthetic* warranty support, parts-inquiry and service-hours process questions from a fictional approved FAQ catalog, returning a stable source ID.

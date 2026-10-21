@@ -26,6 +26,14 @@ MCP provides a protocol for describing and invoking tools. It does **not** suppl
 
 Foundry has tool-specific authentication modes. Read the current Microsoft [MCP authentication](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/mcp-authentication) and [Toolbox auth](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/tools/tool-authentication) docs before choosing a mode.
 
+## Check the audience and the operation
+
+The [MCP authorization specification](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization) and [security guidance](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices) require audience validation and prohibit forwarding arbitrary access tokens. Foundry's term **OAuth identity passthrough** describes a configured user-context flow; it is not permission to send a token intended for another API to a custom MCP server. Verify the server audience and downstream credential exchange.
+
+Record the verified caller, agent/service identity, MCP audience and backend authorization decision for each sensitive operation. Bind an approval or workflow state handle to the authenticated actor and exact operation, including relevant parameters and expiry. An approved action must not be replayed with a different account or payload.
+
+As checked October 21, MCP `latest` resolved to revision `2026-07-28`. Record the protocol version and features actually negotiated by the client/server. A protocol link does not prove implementation conformance. A local stdio server runs local code with its launch permissions, so review its executable and arguments as well as its advertised tools.
+
 ## New server onboarding checklist
 
 1. Verify server publisher, exact transport/URL, code provenance, licensing and update policy.

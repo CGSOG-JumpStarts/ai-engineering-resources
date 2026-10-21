@@ -2,6 +2,8 @@
 
 Work in a personal branch or copy with fictional inputs only. The lab is already implemented. This exercise proposes a clearer acceptance contract; it does not authorize changes to any real system.
 
+[Chapter 3 of the companion](../GUIDE.md#3-make-a-bounded-change) narrates this exercise. Try the assertions yourself, then compare them with the [worked test solution](../examples/companion/mixed_intent_lab.py). Run it from the repository root with `python examples/companion/mixed_intent_lab.py`; it tests existing behavior without adding AC-013 to the baseline spec.
+
 ## Inspect the baseline
 
 From `06-reference-lab`, run:

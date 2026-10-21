@@ -2,6 +2,12 @@
 
 Begin with the core workflow, then use the Foundry material if that platform is relevant to your work. Times below are suggestions.
 
+## Read with the code beside you
+
+The main reading path is [the code companion](GUIDE.md). It follows one fictional application through seven chapters. Start with [a first answer](GUIDE.md#1-a-first-answer), then keep the [example source index](examples/companion/README.md) open as you follow the contract, tests, API and evaluation.
+
+For a quick executable preview, run `python examples/companion/run_all.py` from the repository root. It needs no sockets or external services. The guide explains each result and includes a worked mixed-intent test solution. Continue below if you prefer to start with the complete application checks.
+
 ## First 30 minutes: understand and run
 
 **Read, about 10 minutes:** [Fundamentals](01-spec-driven-development/fundamentals.md) explains the terms and artifacts. Browse the [framework comparison](01-spec-driven-development/framework-comparison.md); no framework installation is required for the lab.
@@ -51,6 +57,10 @@ python 05-evaluation/eval_agent_traces.py
 ```
 
 Expect `example-safe` to pass 5/5 cases and `example-unsafe` to pass 2/5 with blocking failures. Read the [evaluation guide](05-evaluation/README.md) for limits.
+
+## Read the October 2026 update
+
+The [research update](reports/October%202026%20engineering%20update.md) explains when a lighter workflow is sufficient and which context, evaluation and integration decisions need more explicit evidence. For practical application, read [planning and spec maintenance](01-spec-driven-development/recommended-practices.md#size-the-plan-to-the-change), [context versus caching](04-engineering-guardrails/context-and-token-efficiency.md#separate-context-reduction-from-caching), and [independent outcome checks](05-evaluation/agent-tool-evaluation.md#check-outcomes-execution-and-claims-independently).
 
 ## For engineering leads and Foundry users
 

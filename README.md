@@ -1,15 +1,20 @@
 # Spec-driven agentic engineering resources
 
-A company-agnostic learning package for developers, engineering leads and architects getting started with AI-assisted software development. It connects requirements, specifications, agent instructions, implementation tasks and validation evidence. Microsoft Foundry is an optional platform-specific track; the core workflow and offline exercises require no cloud account or model API key.
+A company-agnostic code companion for developers, engineering leads and architects getting started with AI-assisted software development. Follow a fictional support advisor from a request through its specification, implementation, tests, HTTP API and evaluation. Microsoft Foundry is an optional platform-specific track; the core workflow and offline exercises require no cloud account or model API key.
 
 ## Start here
 
-1. Read [Start here](START-HERE.md) for a learning path and the concepts behind the workflow.
-2. Compare [Spec Kit, BMad, HVE Core and a template-based approach](01-spec-driven-development/framework-comparison.md). Try one workflow on a bounded change.
-3. Run the [offline reference lab](06-reference-lab/README.md), then complete the [guided practice change](01-spec-driven-development/guided-exercise.md).
-4. Review the [four reusable skills](02-agent-skills/README.md), including the Foundry documentation adviser.
+Read [Spec-driven engineering: a code companion](GUIDE.md). Its seven connected chapters include code walkthroughs, expected outputs, exercises and a worked test solution. The [companion index](examples/companion/README.md) links each chapter to runnable programs and the existing implementation.
 
-The [resource map](RESOURCE-MAP.md) connects common questions to readings, exercises and review artifacts.
+```bash
+python examples/companion/run_all.py
+```
+
+This runs four programs with Python 3.10+ and no network access. Add `--http` to include a temporary localhost server and three API requests. See [Start here](START-HERE.md) for the shorter route and [the lab guide](06-reference-lab/README.md) to run the browser UI.
+
+After the walkthrough, compare [Spec Kit, BMad, HVE Core and a template-based approach](01-spec-driven-development/framework-comparison.md), or review the [four reusable skills](02-agent-skills/README.md) for your own project.
+
+The [resource map](RESOURCE-MAP.md) connects common questions to readings, exercises and review artifacts. The [October 2026 research update](reports/October%202026%20engineering%20update.md) explains the latest additions: proportional planning, spec maintenance, context/cache boundaries, independent outcome checks and Foundry identity/recovery decisions.
 
 ## Included
 
