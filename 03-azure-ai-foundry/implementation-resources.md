@@ -1,6 +1,6 @@
 # Microsoft Foundry technical resources
 
-The links below go to primary Microsoft documentation. They were researched on **15 October 2026**; this file does not embed copies of mutable vendor docs.
+The links below go to primary Microsoft documentation. The original reading index dates to **15 October 2026**. Selected hosting, identity, skills and evaluation references were rechecked on **21 October 2026** as recorded in [SOURCES.md](../SOURCES.md); other links remain reading references. This file does not embed copies of mutable vendor docs.
 
 ## Build and deploy
 
@@ -45,6 +45,21 @@ npx skills add https://github.com/microsoft/azure-skills --skill microsoft-found
 Follow the [official guide](https://learn.microsoft.com/en-us/azure/foundry/how-to/develop/use-microsoft-foundry-skill) for supported hosts and configuration. Review external code before installing it; no third-party tool is automatically downloaded by this package.
 
 The included [foundry-docs-advisor](../02-agent-skills/foundry-docs-advisor/README.md) is narrower: it checks official references and records feature status, implementation considerations and unknowns. It does not query an Azure tenant. The official skill above includes operational workflows; installing it is separate from permission to use those workflows.
+
+## Define failure behavior before integration
+
+This is a suggested contract-review aid, not evidence that a deployment handles these cases.
+
+| Failure | Behavior to specify and verify |
+|---|---|
+| Expired delegated consent | Request renewed consent; report this attempt as unconfirmed unless backend evidence establishes completion |
+| Timeout after a write | Reconcile backend state and idempotency before retrying |
+| Interrupted response stream | Surface incomplete output and a recoverable request ID |
+| Wrong tenant or account | Backend denies access regardless of the model-supplied identifier |
+| Sensitive content in telemetry | Redact before capture; restrict trace access and retention |
+| Evaluator unsupported for the tool type | Use direct integration assertions and a supported quality rubric |
+
+Check [agent identity migration](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/migrate-agent-applications), [MCP authentication](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/mcp-authentication) and the [evaluator support matrix](https://learn.microsoft.com/en-us/azure/foundry/concepts/evaluation-evaluators/agent-evaluators) against the actual object model and tool. A service GA label does not establish an SDK integration's release status or that an evaluator accepts its traces.
 
 ## Version change procedure
 

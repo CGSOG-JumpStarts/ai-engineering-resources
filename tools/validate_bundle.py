@@ -7,7 +7,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = [
- 'README.md','START-HERE.md','SOURCES.md',
+ 'README.md','START-HERE.md','SOURCES.md','GUIDE.md',
+ 'examples/companion/README.md','examples/companion/run_all.py',
  '01-spec-driven-development/framework-comparison.md',
  '03-azure-ai-foundry/reference-architecture.md',
  '04-engineering-guardrails/secure-mcp-practices.md',

@@ -1,4 +1,28 @@
-# Verified sources and feature-status notes
+# Sources and feature-status notes
+
+## October 21, 2026 update
+
+The following primary sources were inspected for the [October research update](reports/October%202026%20engineering%20update.md). Release tags and feature labels are observations from public pages, not tested installations or archived proof of every earlier October revision. Other entries in the historical index below were not automatically revalidated. No authenticated repositories, Azure tenants or enterprise systems were accessed.
+
+| Source | Observation or use in this update |
+|---|---|
+| [Spec Kit releases](https://github.com/github/spec-kit/releases), [quickstart](https://github.github.io/spec-kit/quickstart.html), [installation](https://github.github.io/spec-kit/installation.html) | Latest listed release v1.2.2, October 19; separate terminal setup and chat skills; record active feature and installed integration |
+| [Spec maintenance](https://github.github.io/spec-kit/guides/evolving-specs.html), [existing projects](https://github.github.io/spec-kit/guides/existing-projects.html) | Team chooses artifact-aging convention; review managed-file updates separately from feature intent |
+| [BMad installation](https://docs.bmad-method.org/start/install-bmad/), [releases](https://github.com/bmad-code-org/BMAD-METHOD/releases) | Page still labels v6.12 stable/v7 preview alpha; releases list v6.12.4, October 14. Earlier ETA is not release evidence |
+| [HVE RPI](https://raw.githubusercontent.com/microsoft/hve-core/main/docs/rpi/README.md), [BMad planning](https://docs.bmad-method.org/plan/choose-a-planning-path/) | Select research/planning for actual evidence or decision gaps; smaller work can take a smaller path |
+| [Agent Skills](https://agentskills.io/specification), [VS Code skills](https://code.visualstudio.com/docs/agent-customization/agent-skills) | Progressive loading and host-specific discovery/behavior; metadata compatibility does not establish execution parity |
+| [Context engineering](https://www.anthropic.com/research/effective-context-engineering-for-ai-agents), [prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) | Compaction risks and provider-native cache/usage semantics; no universal saving inferred |
+| [Agent evaluations](https://www.anthropic.com/research/demystifying-evals-for-ai-agents) | January 9, 2026 guidance distinguishes trials, trajectories and outcomes; repeated success is distinct from best-of-several success |
+| [Hosting choices](https://learn.microsoft.com/en-us/agent-framework/hosting/), [Foundry integration](https://learn.microsoft.com/en-us/agent-framework/hosting/foundry-hosted-agent), [deployment](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/deploy-hosted-agent) | Hosted Agents GA; package-specific prerelease labels remain separate; no SDK/region qualification performed |
+| [Durable execution](https://learn.microsoft.com/en-us/agent-framework/hosting/durable-extension), [checkpoints](https://learn.microsoft.com/en-us/agent-framework/workflows/checkpoints) | Recovery mechanisms require explicit application state, retry and storage contracts |
+| [Identity concepts](https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/agent-identity), [identity migration](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/migrate-agent-applications) | Legacy/new agent models coexist in guidance; confirm actual object model and role assignments rather than assume one publishing identity rule |
+| [Foundry MCP authentication](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/mcp-authentication), [MCP authorization](https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization), [MCP security](https://modelcontextprotocol.io/docs/2026-07-28/tutorials/security/security_best_practices) | User-context flow, audience validation, approval/state binding and local-code boundaries. `latest` resolved to MCP 2026-07-28; implementation support untested |
+| [Foundry Skills](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/tools/skills), [private catalog](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/private-skill-catalog) | Both remain preview at inspection; skill/project/catalog permissions are separate concerns |
+| [Tracing](https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/trace-agent-setup), [evaluators](https://learn.microsoft.com/en-us/azure/foundry/concepts/evaluation-evaluators/agent-evaluators) | Verify agent/tool support and lifecycle per feature; telemetry access/content and evaluator suitability require integration checks |
+
+Some Microsoft Learn responses displayed authorization banners while returning readable article bodies. The research used those bodies without signing in. Contradictory identity wording and untested tenant/SDK/region behavior remain explicit unknowns. Frameworks and mutable docs were not independently exercised. The [research notes](research_notes/October%202026%20engineering%20update/workflows.md), [practice notes](research_notes/October%202026%20engineering%20update/practices.md) and [Foundry/MCP notes](research_notes/October%202026%20engineering%20update/foundry-mcp.md) separate source observations from editorial recommendations.
+
+## Historical reading index: October 15, 2026
 
 **Documentation checkpoint:** 2026-10-15. This is a primary-source reading index. The recheck scope below records which references were inspected for this update. Other entries remain reading links; their presence does not establish current feature availability. Documentation can change after this date. No authenticated repository, Azure tenant or enterprise system was accessed.
 
@@ -36,7 +60,7 @@
 
 For the Foundry-specific allowlisted documentation helper, see `02-agent-skills/foundry-docs-advisor/scripts/refresh_references.py`.
 
-## Recheck scope for this update
+## Historical recheck scope: October 15
 
 Public pages inspected on 2026-10-15:
 

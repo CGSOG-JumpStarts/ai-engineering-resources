@@ -1,10 +1,16 @@
 # Microsoft Foundry: capabilities and runtime choices
 
-**Research checkpoint: 2026-10-15.** Use this guide to compare Foundry options for an advisory-agent application. It assumes no particular company architecture or existing deployment.
+**Rechecked: 2026-10-21.** Use this guide to compare Foundry options for an advisory-agent application. It assumes no particular company architecture or existing deployment.
 
 ## What Foundry adds
 
 Foundry provides a model/agent development environment with managed agent hosting options, tool integrations, identity, tracing and evaluation capabilities. Actual options depend on project type, region, permission model and feature lifecycle. Some capabilities are preview. The user-facing dealer portal, system-of-record permissions, application API, incident handling and operations still need explicit implementation.
+
+## Choose the execution behavior first
+
+This package recommends choosing the control structure before hosting. Use deterministic code for known rules. A bounded model call can handle one extraction, classification or summary. An agent loop is useful when the next permitted tool/action depends on intermediate results. An explicit workflow is useful when ordering, approval and recovery must follow a defined business contract. These choices can coexist in one application; they are not mandatory adoption stages.
+
+For a synthetic support case, summarizing an approved FAQ needs no autonomous action loop. A case-creation workflow needs a validated target, permitted write, idempotency and recovery even if a model drafts the description. Define those responsibilities before choosing a container or SDK. Foundry's [agent overview](https://learn.microsoft.com/en-us/azure/foundry/agents/overview) and [hosting guide](https://learn.microsoft.com/en-us/agent-framework/hosting/) describe different service and hosting paths.
 
 ## Choosing a runtime
 
@@ -19,6 +25,16 @@ Do **not** infer that choosing Agent Framework deploys APIs, provisions downstre
 
 **Current status:** Microsoft documents Foundry Hosted Agents as **generally available**. Some package surfaces, Skills APIs and optional integration types have different lifecycle labels. [Hosting overview](https://learn.microsoft.com/en-us/agent-framework/hosting/), [Hosted Agents](https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/hosted-agents), [deployment guide](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/deploy-hosted-agent).
 
+## State and recovery are separate contracts
+
+| State | Recovery question |
+|---|---|
+| Conversation history | Can the assistant recover the relevant intent and constraints? |
+| Hosted-session files/state | What survives a session/process restart, and who can access it? |
+| Business workflow progress | Which action committed, which approval remains valid, and what is safe to retry? |
+
+A surviving conversation does not prove that a timed-out write failed. Reconcile backend state before retrying; record idempotency keys and approval identities. [Durable execution](https://learn.microsoft.com/en-us/agent-framework/hosting/durable-extension) and [workflow checkpoints](https://learn.microsoft.com/en-us/agent-framework/workflows/checkpoints) provide mechanisms, while the application still defines transactional behavior and storage controls.
+
 ## Choosing tool identity
 
 - Use **per-user identity/passthrough** where a dealer-facing action must preserve a caller's authorization.
@@ -28,6 +44,10 @@ Do **not** infer that choosing Agent Framework deploys APIs, provisions downstre
 - Limit anonymous tools to explicitly public resources.
 
 The precise supported methods depend on tool type. See [tool auth](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/tools/tool-authentication), [MCP authentication](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/mcp-authentication) and [agent identity](https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/agent-identity).
+
+### Confirm the agent object model
+
+Microsoft's [identity concepts](https://learn.microsoft.com/en-us/azure/foundry/agents/concepts/agent-identity) and [migration guide](https://learn.microsoft.com/en-us/azure/foundry/agents/how-to/migrate-agent-applications) describe legacy Agent Applications and a newer agent model. Their creation/publishing identity behavior differs. Record the actual resource/API path, agent identity, endpoint and role bindings instead of assuming one universal publishing rule. Recreating an agent can change the identity; verify downstream role assignments after migration. The migration examples include preview surfaces, so do not infer universal tenant availability.
 
 ## Observability and evaluation
 

@@ -1,6 +1,6 @@
 # Spec-driven development framework comparison
 
-**Checked:** 15 October 2026. These are not substitutes for code review, security controls, an SDLC, or CI validation. Choose by workflow, maintenance requirements and team fit rather than popularity.
+**Checked:** 21 October 2026. These are not substitutes for code review, security controls, an SDLC, or CI validation. Choose by workflow, maintenance requirements and team fit rather than popularity.
 
 | Option | Best fit | What it contributes | Considerations | First trial |
 |---|---|---|---|---|
@@ -9,6 +9,12 @@
 | [Microsoft HVE Core](https://github.com/microsoft/hve-core) | GitHub Copilot-oriented teams exploring repeatable research, planning, implementation and review | RPI task identity, evidence and review phases; reusable prompts, instructions, skills | Repository explicitly says the project is opinionated and rapidly changing; pin a known revision for experiments | RPI on a bounded integration change |
 | **Jump Start AutoNav** (optional author reference) | A separate discussion of lifecycle coordination and human review gates | Request a demonstration from its owner | Access, released version and distribution rights are unverified in this update; no code is bundled | Consider only after a reviewed, accessible distribution is available |
 | Existing repo conventions plus focused skills | Teams with mature CI, reviews and agreed engineering standards | Minimal disruption; small version-controlled templates and automated checks | Requires the team to create governance/traceability; no prebuilt lifecycle coordinator | Apply spec template, acceptance tests and a review skill to one PR |
+
+## Release observations, not installation results
+
+On October 21, the public [Spec Kit releases](https://github.com/github/spec-kit/releases) listed **v1.2.2** (October 19) as Latest. [BMad releases](https://github.com/bmad-code-org/BMAD-METHOD/releases) listed **v6.12.4** (October 14); its [installation page](https://docs.bmad-method.org/start/install-bmad/) still labeled v7 preview alpha and v6.12 stable. An elapsed release ETA is not evidence of general availability. These are documentation observations; no package or coding-assistant integration was installed for this update.
+
+Spec Kit also documents separate bug-fixing and idea-assessment paths. A feature specification is appropriate when intended behavior needs definition; a diagnosed defect can use a bounded repair task. Choose the entry point before creating documents. See [proportional planning](recommended-practices.md#size-the-plan-to-the-change).
 
 ## Suggested first evaluation
 
@@ -30,4 +36,4 @@ Score each option from recorded evidence on:
 
 ## Status caveat
 
-Spec Kit and HVE Core change frequently. BMad installation guidance on 15 October 2026 explicitly says use v6.12 if stability matters. Refer to [SOURCES.md](../SOURCES.md) rather than assuming command names, statuses or package versions remain unchanged.
+Spec Kit and HVE Core change frequently. BMad installation guidance inspected on 21 October 2026 still identifies v6.12 as stable. Refer to [SOURCES.md](../SOURCES.md) rather than assuming command names, statuses or package versions remain unchanged.

@@ -17,6 +17,8 @@ jobs:
         run: python tools/validate_bundle.py
       - name: Test documentation helper safeguards
         run: python -m unittest discover -s 02-agent-skills/foundry-docs-advisor/tests -v
+      - name: Run code companion examples
+        run: python examples/companion/run_all.py --http
       - name: Run reference lab tests
         working-directory: 06-reference-lab
         run: python -m unittest discover -s tests -v

@@ -1,6 +1,6 @@
 # Trying public spec-driven development tools
 
-Use a scratch repository with fictional data first. Commands below reflect vendor-maintained documentation reviewed on **15 October 2026**. Check current prerequisites, release tags, supply-chain policy and tool integration names before installation.
+Use a scratch repository with fictional data first. Commands below reflect vendor-maintained documentation rechecked on **21 October 2026**. Check current prerequisites, release tags, supply-chain policy and tool integration names before installation.
 
 ## GitHub Spec Kit
 
@@ -13,17 +13,19 @@ uv tool install specify-cli
 specify init sample-feature --integration copilot
 ```
 
-In Copilot, follow the installed Spec Kit commands/skills to specify, plan, tasks, implement and converge; exact invocation syntax varies with integration and version. Before implementation, inspect generated plans and run the provided clarify/checklist/analyze reviews where required.
+The commands above are terminal setup. Spec Kit's `/speckit-*` skills are invoked in the coding assistant's chat; do not paste them into the shell. Read the current [installation](https://github.github.io/spec-kit/installation.html) and [quickstart](https://github.github.io/spec-kit/quickstart.html) guides for your integration. Record the installed CLI release/revision, integration and extensions alongside the pilot. The observed v1.2.2 release is not a tested dependency pin in this package.
+
+Before implementation, inspect generated plans and use clarify/checklist/analyze for unresolved questions or consistency review. The current quickstart records active feature state in `.specify/feature.json`; a Git branch switch alone does not establish which feature the assistant will use. Check the selected feature when resuming work.
 
 ## BMad Method stable release
 
-Official [installation guide](https://docs.bmad-method.org/start/install-bmad/) explicitly differentiates the stable **v6.12** path from **v7 preview alpha** (as of 2026-10-15). The stable path lists Node.js 20.12+, Python 3.10+ and uv, and the command:
+Official [installation guide](https://docs.bmad-method.org/start/install-bmad/) explicitly differentiates the stable **v6.12** path from **v7 preview alpha** (as checked 2026-10-21). The stable path lists Node.js 20.12+, Python 3.10+ and uv, and the command:
 
 ```bash
 npx bmad-method install
 ```
 
-Review the exact version resolved by npm and pin it for team trials. Do not use the moving preview as the default reference for a reliability-focused pilot.
+The later skills/marketplace instructions on that page describe the v7 preview path. Do not mix them with a v6.12 setup by assumption. Review the exact version resolved by npm and pin it for team trials. Do not use the moving preview as the default reference for a reliability-focused pilot.
 
 ## Microsoft HVE Core
 

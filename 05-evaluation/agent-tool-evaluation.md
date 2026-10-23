@@ -17,6 +17,20 @@ AI tool correctness is an end-to-end property: the user intended something, an a
 | Excessive tool loop | Max steps/latency/budget bound enforced |
 | Cost/regression | All actual calls metered and compared to baseline |
 
+## Check outcomes, execution and claims independently
+
+For an illustrative case-creation task outside the read-only lab, inspect three kinds of evidence:
+
+| Check | Evidence |
+|---|---|
+| Intended outcome | The correct case exists once in the test backend, or no case exists when denied |
+| Authorized execution | Verified caller, allowed tool/parameters, valid approval and no prohibited side effects |
+| Truthful response | The displayed status agrees with the backend, including incomplete or failed work |
+
+An agent's "created" response or self-reported tool label proves none of these by itself. Assert exact call ordering only when order is part of the contract; otherwise permit alternative authorized paths that reach the required state. The fixture scorer intentionally checks exact traces and cannot observe real backend effects.
+
+[Anthropic's agent-evaluation guidance](https://www.anthropic.com/research/demystifying-evals-for-ai-agents), published January 2026, distinguishes trials, trajectories and outcomes. For this package, use deterministic backend assertions for state/permission checks and a separately reviewed rubric for answer quality.
+
 ## Metric record
 
 For each run, record `case_id`, testset version, prompt/model/tool version, actor role, expected outcome, actual outcome, selected tool, tool args schema, tool status, final response evidence ID, milliseconds, input/output tokens, cost and human reviewer disposition. Protect any trace containing user data.
